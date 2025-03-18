@@ -1,9 +1,20 @@
+document.addEventListener("DOMContentLoaded", function() {
+    const menuIcon = document.getElementById("menu-icon");
+    const menuList = document.getElementById("menuList");
+
+    menuIcon.addEventListener("click", function() {
+        menuList.classList.toggle("active");
+    });
+});
+
+
+
 const typewriterElement = document.querySelector('.typewriter-text');
 const lines = [
-    "Joel Dibdib",
-    "Developer.",
-    "Graphic Designer.",
-    "UI/UX Interface Designer."
+    "JOEL DIBDIB",
+    "DEVELOPER.",
+    "GRAPHIC DESIGNER.",
+    "USER INTERFACE DESIGNER."
 ];
 
 let lineIndex = 0;

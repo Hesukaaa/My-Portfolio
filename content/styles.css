@@ -1,295 +1,519 @@
-:root {
-    --font-family-inter: 'Inter', sans-serif;
-    --text-rgb-236-74-74: rgba(236, 74, 74, 1);
-    --text-white: rgba(255, 255, 255, 0.7);
-    --text-rgb-204-74-75: rgba(204, 74, 75, 1);
-}
-
-.text-rgb-236-74-74 {
-    color: var(--text-rgb-236-74-74);
-}
-
-.text-white {
-    color: var(--text-white);
-}
-
-.text-rgb-204-74-75 {
-    color: var(--text-rgb-204-74-75);
-}
-
-
-/* CSS Reset */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-body {
-    width: 100%;
-    min-height: 100vh;
-    overflow-x: hidden;
-    background-color: black;
-}
-
-.container {}
-
-.navBar {
-    height: 150px;
-    width: 100%;
-    display: flex;
-}
-
-.navBar .logo {
-    display: flex;
-    height: 100%;
-    width: 300px;
-    margin-left: 40px;
-    align-items: center;
-    justify-content: center;
-}
-
-.logo .circle {
-    height: 60px;
-    width: 60px;
-    border-radius: 50%;
-    background-color: transparent;
-    display: flex;
-    outline: 5px solid #EC4A4A;
-    align-items: center;
-    justify-content: center;
-}
-
-.logo .circle .circles {
-    height: 70px;
-    width: 70px;
-    border-radius: 50%;
-    background-color: transparent;
-    display: flex;
-    outline: 5px solid #ec4a4a31;
-    position: absolute;
-}
-
-.logo img {
-    height: 50px;
-    position: absolute;
-    cursor: pointer;
-}
-
-.navBar .navLinks {
-    justify-content: end;
-    align-items: center;
-    display: flex;
-    float: right;
-    width: 100%;
-    padding-right: 100px;
-}
-
-.navBar .navLinks ul li {
-    display: inline-block;
-    margin-right: 20px;
-}
-
-.navBar .navLinks ul li a {
-    text-decoration: none;
-    color: white;
-    font-size: 16px;
-    font-family: var(--font-family-inter);
-    transition: 0.5s ease-in-out;
-    cursor: pointer;
-}
-
-.navBar .navLinks ul li a:hover {
-    color: #EC4A4A;
-}
-
-.contents .imgs {
-    justify-content: center;
-    align-items: center;
-    display: flex;
-}
-
-.left_content {
-    margin-top: 70px;
-    width: 50%;
-    height: 500px;
-    position: absolute;
-    padding-left: 140px;
-    padding-top: 100px;
-}
-
-.left_content .text span {
-    color: white;
-    font-size: 50px;
-    font-weight: 800;
-}
-
-.left_content .text .typewriter-text {
-    width: 100%;
-    letter-spacing: 2px;
-    color: #EC4A4A;
-    border-right: 3px solid white;
-    font-size: 40px;
-    white-space: nowrap;
-    overflow: hidden;
-    animation: typing 4s steps(30) 1s 1 normal both, blink 0.75s step-end infinite;
-}
-
-@keyframes typing {
-    from {
-        width: 0;
-    }
-    to {
-        width: 100%;
-    }
-}
-
-@keyframes blink {
-    50% {
-        border-color: transparent;
-    }
-}
-
-.button button {
-    height: 60px;
-    width: 200px;
-    cursor: pointer;
-    background-color: #EC4A4A;
-    outline: none;
-    border: none;
-    margin-top: 60px;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    border-radius: 10px;
-}
-
-.button button:hover {
-    background-color: #D93B3B;
-    transform: scale(1.05);
-}
-
-.box_bg img {
-    width: 90px;
-    height: 90px;
-    transition: transform 0.3s ease-in-out;
-}
-
-.button button:hover .box_bg img {
-    transform: translateX(5px);
-}
-
-.button button:active {
-    transform: scale(0.95);
-}
-
-.button button .text_hire {
-    color: white;
-    letter-spacing: 1px;
-    position: absolute;
-    margin-left: -100px;
-}
-
-
-/* .button button .box_bg img {
+                                                                                                                                                                                                                                                                     :root {
+                                                                                                                                                                                                                                                                        --font-family-inter: 'Inter', sans-serif;
+                                                                                                                                                                                                                                                                        --text-rgb-236-74-74: rgba(236, 74, 74, 1);
+                                                                                                                                                                                                                                                                        --text-white: rgba(255, 255, 255, 0.7);
+                                                                                                                                                                                                                                                                        --text-rgb-204-74-75: rgba(204, 74, 75, 1);
+                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                    .text-rgb-236-74-74 {
+                                                                                                                                                                                                                                                                        color: var(--text-rgb-236-74-74);
+                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                    .text-white {
+                                                                                                                                                                                                                                                                        color: var(--text-white);
+                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                    .text-rgb-204-74-75 {
+                                                                                                                                                                                                                                                                        color: var(--text-rgb-204-74-75);
+                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                    /* CSS Reset */
+                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                    * {
+                                                                                                                                                                                                                                                                        margin: 0;
+                                                                                                                                                                                                                                                                        padding: 0;
+                                                                                                                                                                                                                                                                        box-sizing: border-box;
+                                                                                                                                                                                                                                                                        font-family: "Rubik", sans-serif;
+                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                    body {
+                                                                                                                                                                                                                                                                        width: 100%;
+                                                                                                                                                                                                                                                                        min-height: 100vh;
+                                                                                                                                                                                                                                                                        overflow-x: hidden;
+                                                                                                                                                                                                                                                                        background-color: black;
+                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                    .container {}
+                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                    .navBar {
+                                                                                                                                                                                                                                                                        height: 150px;
+                                                                                                                                                                                                                                                                        width: 100%;
+                                                                                                                                                                                                                                                                        display: flex;
+                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                    @media screen and (max-width: 768px) {
+                                                                                                                                                                                                                                                                        .navBar {
+                                                                                                                                                                                                                                                                            height: 80px;
+                                                                                                                                                                                                                                                                        }
+                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                    .navBar .logo {
+                                                                                                                                                                                                                                                                        display: flex;
+                                                                                                                                                                                                                                                                        height: 100%;
+                                                                                                                                                                                                                                                                        width: 300px;
+                                                                                                                                                                                                                                                                        margin-left: 40px;
+                                                                                                                                                                                                                                                                        align-items: center;
+                                                                                                                                                                                                                                                                        justify-content: center;
+                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                    @media screen and (max-width: 768px) {
+                                                                                                                                                                                                                                                                        .navBar .logo {
+                                                                                                                                                                                                                                                                            margin-left: -40px;
+                                                                                                                                                                                                                                                                        }
+                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                    .logo .circle {
+                                                                                                                                                                                                                                                                        height: 60px;
+                                                                                                                                                                                                                                                                        width: 60px;
+                                                                                                                                                                                                                                                                        border-radius: 50%;
+                                                                                                                                                                                                                                                                        background-color: transparent;
+                                                                                                                                                                                                                                                                        display: flex;
+                                                                                                                                                                                                                                                                        outline: 5px solid #EC4A4A;
+                                                                                                                                                                                                                                                                        align-items: center;
+                                                                                                                                                                                                                                                                        justify-content: center;
+                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                    .logo .circle .circles {
+                                                                                                                                                                                                                                                                        height: 70px;
+                                                                                                                                                                                                                                                                        width: 70px;
+                                                                                                                                                                                                                                                                        border-radius: 50%;
+                                                                                                                                                                                                                                                                        background-color: transparent;
+                                                                                                                                                                                                                                                                        display: flex;
+                                                                                                                                                                                                                                                                        outline: 5px solid #ec4a4a31;
+                                                                                                                                                                                                                                                                        position: absolute;
+                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                    @media screen and (max-width: 768px) {
+                                                                                                                                                                                                                                                                        .logo .circle {
+                                                                                                                                                                                                                                                                            height: 40px;
+                                                                                                                                                                                                                                                                            width: 40px;
+                                                                                                                                                                                                                                                                        }
+                                                                                                                                                                                                                                                                        .logo .circle .circles {
+                                                                                                                                                                                                                                                                            height: 50px;
+                                                                                                                                                                                                                                                                            width: 50px;
+                                                                                                                                                                                                                                                                        }
+                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                    .logo img {
+                                                                                                                                                                                                                                                                        height: 50px;
+                                                                                                                                                                                                                                                                        position: absolute;
+                                                                                                                                                                                                                                                                        cursor: pointer;
+                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                    @media screen and (max-width: 768px) {
+                                                                                                                                                                                                                                                                        .logo img {
+                                                                                                                                                                                                                                                                            height: 25px;
+                                                                                                                                                                                                                                                                        }
+                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                    .navBar .navLinks {
+                                                                                                                                                                                                                                                                        justify-content: end;
+                                                                                                                                                                                                                                                                        align-items: center;
+                                                                                                                                                                                                                                                                        display: flex;
+                                                                                                                                                                                                                                                                        float: right;
+                                                                                                                                                                                                                                                                        width: 100%;
+                                                                                                                                                                                                                                                                        padding-right: 100px;
+                                                                                                                                                                                                                                                                        position: relative;
+                                                                                                                                                                                                                                                                        z-index: 1000;
+                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                    .navBar .navLinks ul {
+                                                                                                                                                                                                                                                                        display: block;
+                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                    .navBar .navLinks ul li {
+                                                                                                                                                                                                                                                                        display: inline-block;
+                                                                                                                                                                                                                                                                        margin-right: 20px;
+                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                    .navBar .navLinks ul li a {
+                                                                                                                                                                                                                                                                        text-decoration: none;
+                                                                                                                                                                                                                                                                        color: white;
+                                                                                                                                                                                                                                                                        font-size: 16px;
+                                                                                                                                                                                                                                                                        font-family: var(--font-family-inter);
+                                                                                                                                                                                                                                                                        transition: 0.5s ease-in-out;
+                                                                                                                                                                                                                                                                        cursor: pointer;
+                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                    .navBar .navLinks .menu-icon {
+                                                                                                                                                                                                                                                                        display: none;
+                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                    @media screen and (max-width: 768px) {
+                                                                                                                                                                                                                                                                        .navBar .navLinks .menu-icon {
+                                                                                                                                                                                                                                                                            display: block;
+                                                                                                                                                                                                                                                                            position: absolute;
+                                                                                                                                                                                                                                                                        }
+                                                                                                                                                                                                                                                                        .navBar .navLinks .menu-icon img {
+                                                                                                                                                                                                                                                                            height: 80px;
+                                                                                                                                                                                                                                                                            cursor: pointer;
+                                                                                                                                                                                                                                                                            margin-right: -200px;
+                                                                                                                                                                                                                                                                            transition: 0.3s;
+                                                                                                                                                                                                                                                                        }
+                                                                                                                                                                                                                                                                        .navBar .navLinks .menu-icon img:hover {
+                                                                                                                                                                                                                                                                            filter: brightness(0) saturate(100%) invert(39%) sepia(99%) saturate(2886%) hue-rotate(8deg) brightness(97%) contrast(98%);
+                                                                                                                                                                                                                                                                        }
+                                                                                                                                                                                                                                                                        .navBar .navLinks ul {
+                                                                                                                                                                                                                                                                            display: none;
+                                                                                                                                                                                                                                                                            position: absolute;
+                                                                                                                                                                                                                                                                            top: 55px;
+                                                                                                                                                                                                                                                                            right: 25px;
+                                                                                                                                                                                                                                                                            background-color: rgba(0, 0, 0, 0.9);
+                                                                                                                                                                                                                                                                            width: 30%;
+                                                                                                                                                                                                                                                                            text-align: right;
+                                                                                                                                                                                                                                                                            flex-direction: column;
+                                                                                                                                                                                                                                                                            padding: 10px 0;
+                                                                                                                                                                                                                                                                        }
+                                                                                                                                                                                                                                                                        .navLinks ul li {
+                                                                                                                                                                                                                                                                            margin: 10px 0;
+                                                                                                                                                                                                                                                                        }
+                                                                                                                                                                                                                                                                        .navBar .navLinks ul.active {
+                                                                                                                                                                                                                                                                            display: flex !important;
+                                                                                                                                                                                                                                                                            flex-direction: column;
+                                                                                                                                                                                                                                                                        }
+                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                    .navBar .navLinks ul li a:hover {
+                                                                                                                                                                                                                                                                        color: #EC4A4A;
+                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                    .contents .imgs {
+                                                                                                                                                                                                                                                                        justify-content: center;
+                                                                                                                                                                                                                                                                        align-items: center;
+                                                                                                                                                                                                                                                                        display: flex;
+                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                    .contents .imgs .circuls {
+                                                                                                                                                                                                                                                                        height: 700px;
+                                                                                                                                                                                                                                                                        width: 700px;
+                                                                                                                                                                                                                                                                        background-color: #d6101005;
+                                                                                                                                                                                                                                                                        border-radius: 50%;
+                                                                                                                                                                                                                                                                        position: absolute;
+                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                    @media screen and (max-width: 768px) {
+                                                                                                                                                                                                                                                                        .contents .imgs img {
+                                                                                                                                                                                                                                                                            margin-top: 200px;
+                                                                                                                                                                                                                                                                            height: 250px;
+                                                                                                                                                                                                                                                                            z-index: 1000;
+                                                                                                                                                                                                                                                                        }
+                                                                                                                                                                                                                                                                        .contents .imgs .circuls {
+                                                                                                                                                                                                                                                                            height: 200px;
+                                                                                                                                                                                                                                                                            width: 200px;
+                                                                                                                                                                                                                                                                            border-radius: 50%;
+                                                                                                                                                                                                                                                                            background-color: rgba(255, 0, 0, 0.075);
+                                                                                                                                                                                                                                                                            margin-top: 215px;
+                                                                                                                                                                                                                                                                            margin-right: 10px;
+                                                                                                                                                                                                                                                                        }
+                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                    .left_content {
+                                                                                                                                                                                                                                                                        margin-top: 70px;
+                                                                                                                                                                                                                                                                        width: 50%;
+                                                                                                                                                                                                                                                                        height: 500px;
+                                                                                                                                                                                                                                                                        position: absolute;
+                                                                                                                                                                                                                                                                        padding-left: 140px;
+                                                                                                                                                                                                                                                                        padding-top: 100px;
+                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                    .left_content .text span {
+                                                                                                                                                                                                                                                                        color: rgba(255, 255, 255, 0.356);
+                                                                                                                                                                                                                                                                        font-size: 50px;
+                                                                                                                                                                                                                                                                        font-weight: 800;
+                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                    .left_content .text .typewriter-text {
+                                                                                                                                                                                                                                                                        width: 100%;
+                                                                                                                                                                                                                                                                        letter-spacing: 2px;
+                                                                                                                                                                                                                                                                        color: #ec4a4a6e;
+                                                                                                                                                                                                                                                                        border-right: 3px solid white;
+                                                                                                                                                                                                                                                                        font-size: 40px;
+                                                                                                                                                                                                                                                                        white-space: nowrap;
+                                                                                                                                                                                                                                                                        overflow: hidden;
+                                                                                                                                                                                                                                                                        animation: typing 4s steps(30) 1s 1 normal both, blink 0.75s step-end infinite;
+                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                    @keyframes typing {
+                                                                                                                                                                                                                                                                        from {
+                                                                                                                                                                                                                                                                            width: 0;
+                                                                                                                                                                                                                                                                        }
+                                                                                                                                                                                                                                                                        to {
+                                                                                                                                                                                                                                                                            width: 100%;
+                                                                                                                                                                                                                                                                        }
+                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                    @keyframes blink {
+                                                                                                                                                                                                                                                                        50% {
+                                                                                                                                                                                                                                                                            border-color: transparent;
+                                                                                                                                                                                                                                                                        }
+                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                    @media screen and (max-width: 768px) {
+                                                                                                                                                                                                                                                                        .left_content {
+                                                                                                                                                                                                                                                                            width: 100%;
+                                                                                                                                                                                                                                                                            padding-left: 20px;
+                                                                                                                                                                                                                                                                        }
+                                                                                                                                                                                                                                                                        .left_content .text span {
+                                                                                                                                                                                                                                                                            margin-top: -103px;
+                                                                                                                                                                                                                                                                            font-size: 30px;
+                                                                                                                                                                                                                                                                            position: absolute;
+                                                                                                                                                                                                                                                                        }
+                                                                                                                                                                                                                                                                        .left_content .text .typewriter-text {
+                                                                                                                                                                                                                                                                            font-size: 25px;
+                                                                                                                                                                                                                                                                            margin-top: -79px;
+                                                                                                                                                                                                                                                                            position: absolute;
+                                                                                                                                                                                                                                                                        }
+                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                    .button button {
+                                                                                                                                                                                                                                                                        height: 60px;
+                                                                                                                                                                                                                                                                        width: 200px;
+                                                                                                                                                                                                                                                                        cursor: pointer;
+                                                                                                                                                                                                                                                                        background-color: #EC4A4A;
+                                                                                                                                                                                                                                                                        outline: none;
+                                                                                                                                                                                                                                                                        border: none;
+                                                                                                                                                                                                                                                                        margin-top: 60px;
+                                                                                                                                                                                                                                                                        justify-content: center;
+                                                                                                                                                                                                                                                                        align-items: center;
+                                                                                                                                                                                                                                                                        display: flex;
+                                                                                                                                                                                                                                                                        border-radius: 10px;
+                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                    .button button:hover {
+                                                                                                                                                                                                                                                                        background-color: #D93B3B;
+                                                                                                                                                                                                                                                                        transform: scale(1.05);
+                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                    @media screen and (max-width: 768px) {
+                                                                                                                                                                                                                                                                        .button button {
+                                                                                                                                                                                                                                                                            margin-top: 35rem;
+                                                                                                                                                                                                                                                                            position: absolute;
+                                                                                                                                                                                                                                                                            margin-left: 1.4rem;
+                                                                                                                                                                                                                                                                        }
+                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                    .box_bg img {
+                                                                                                                                                                                                                                                                        width: 90px;
+                                                                                                                                                                                                                                                                        height: 90px;
+                                                                                                                                                                                                                                                                        transition: transform 0.3s ease-in-out;
+                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                    .button button:hover .box_bg img {
+                                                                                                                                                                                                                                                                        transform: translateX(5px);
+                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                    .button button:active {
+                                                                                                                                                                                                                                                                        transform: scale(0.95);
+                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                    .button button .text_hire {
+                                                                                                                                                                                                                                                                        color: white;
+                                                                                                                                                                                                                                                                        letter-spacing: 1px;
+                                                                                                                                                                                                                                                                        position: absolute;
+                                                                                                                                                                                                                                                                        margin-left: -100px;
+                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                    /* .button button .box_bg img {
     height: 150px;
     margin-right: px;
     position: absolute;
 } */
-
-.button .box_bg {
-    height: 50px;
-    width: 80px;
-    background-color: #f87878;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: -110px;
-}
-
-.left_content .social_media {
-    margin-top: 100px;
-    gap: 10px;
-    margin-left: -20px;
-}
-
-.left_content .social_media img {
-    height: 50px;
-}
-
-.left_content .social_media a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    /* Adjust size */
-    height: 50px;
-    border: 2px solid transparent;
-    /* Default transparent border */
-    border-radius: 50%;
-    transition: all 0.3s ease-in-out;
-}
-
-.left_content .social_media a img {
-    width: 30px;
-    /* Adjust size */
-    height: 30px;
-    transition: transform 0.3s ease-in-out;
-}
-
-.left_content .social_media a:hover {
-    border-color: #EC4A4A;
-    /* Red outline */
-    background-color: #EC4A4A;
-    /* Background color changes to red */
-}
-
-.left_content .social_media a:hover img {
-    filter: brightness(0) invert(1);
-    /* Change image color to white */
-    transform: scale(1.1);
-}
-
-.right_content {
-    top: 40px;
-    height: 500px;
-    width: 30%;
-    position: absolute;
-    right: 100px;
-}
-
-.right_content .circle {
-    height: 150px;
-    width: 150px;
-    border-radius: 50%;
-    background-color: transparent;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 100px;
-    outline: 10px solid aqua;
-}
-
-.right_content .circle .circles {
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    background-color: transparent;
-    outline: 10px solid #EC4A4A;
-    margin-left: 100px;
-    position: absolute;
-    margin-top: -120px;
-}
-
-.right_content .texts {
-    margin-top: 50px;
-}
-
-.right_content .texts .text_exp {
-    color: #EC4A4A;
-    font-size: 16px;
-    font-weight: 400;
-}
+                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                    .button .box_bg {
+                                                                                                                                                                                                                                                                        height: 50px;
+                                                                                                                                                                                                                                                                        width: 80px;
+                                                                                                                                                                                                                                                                        background-color: #f87878;
+                                                                                                                                                                                                                                                                        border-radius: 10px;
+                                                                                                                                                                                                                                                                        display: flex;
+                                                                                                                                                                                                                                                                        justify-content: center;
+                                                                                                                                                                                                                                                                        align-items: center;
+                                                                                                                                                                                                                                                                        margin-right: -110px;
+                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                    .left_content .social_media {
+                                                                                                                                                                                                                                                                        margin-top: 100px;
+                                                                                                                                                                                                                                                                        gap: 10px;
+                                                                                                                                                                                                                                                                        margin-left: -20px;
+                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                    .left_content .social_media img {
+                                                                                                                                                                                                                                                                        height: 50px;
+                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                    .left_content .social_media a {
+                                                                                                                                                                                                                                                                        display: flex;
+                                                                                                                                                                                                                                                                        justify-content: center;
+                                                                                                                                                                                                                                                                        align-items: center;
+                                                                                                                                                                                                                                                                        width: 50px;
+                                                                                                                                                                                                                                                                        /* Adjust size */
+                                                                                                                                                                                                                                                                        height: 50px;
+                                                                                                                                                                                                                                                                        border: 2px solid transparent;
+                                                                                                                                                                                                                                                                        /* Default transparent border */
+                                                                                                                                                                                                                                                                        border-radius: 50%;
+                                                                                                                                                                                                                                                                        transition: all 0.3s ease-in-out;
+                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                    .left_content .social_media a img {
+                                                                                                                                                                                                                                                                        width: 30px;
+                                                                                                                                                                                                                                                                        /* Adjust size */
+                                                                                                                                                                                                                                                                        height: 30px;
+                                                                                                                                                                                                                                                                        transition: transform 0.3s ease-in-out;
+                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                    .left_content .social_media a:hover {
+                                                                                                                                                                                                                                                                        border-color: #EC4A4A;
+                                                                                                                                                                                                                                                                        /* Red outline */
+                                                                                                                                                                                                                                                                        background-color: #EC4A4A;
+                                                                                                                                                                                                                                                                        /* Background color changes to red */
+                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                    .left_content .social_media a:hover img {
+                                                                                                                                                                                                                                                                        filter: brightness(0) invert(1);
+                                                                                                                                                                                                                                                                        /* Change image color to white */
+                                                                                                                                                                                                                                                                        transform: scale(1.1);
+                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                    @media screen and (max-width: 768px) {
+                                                                                                                                                                                                                                                                        .left_content .social_media a img {
+                                                                                                                                                                                                                                                                            width: 20px;
+                                                                                                                                                                                                                                                                            height: 20px;
+                                                                                                                                                                                                                                                                            z-index: 1000;
+                                                                                                                                                                                                                                                                            margin-top: 28rem;
+                                                                                                                                                                                                                                                                        }
+                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                    .right_content {
+                                                                                                                                                                                                                                                                        top: 80px;
+                                                                                                                                                                                                                                                                        height: 500px;
+                                                                                                                                                                                                                                                                        width: 30%;
+                                                                                                                                                                                                                                                                        position: absolute;
+                                                                                                                                                                                                                                                                        right: 100px;
+                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                    .right_content .circle {
+                                                                                                                                                                                                                                                                        height: 150px;
+                                                                                                                                                                                                                                                                        width: 150px;
+                                                                                                                                                                                                                                                                        border-radius: 50%;
+                                                                                                                                                                                                                                                                        background-color: transparent;
+                                                                                                                                                                                                                                                                        display: flex;
+                                                                                                                                                                                                                                                                        justify-content: center;
+                                                                                                                                                                                                                                                                        align-items: center;
+                                                                                                                                                                                                                                                                        margin-top: 110px;
+                                                                                                                                                                                                                                                                        outline: 10px solid aqua;
+                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                    .right_content .circle .circles {
+                                                                                                                                                                                                                                                                        height: 50px;
+                                                                                                                                                                                                                                                                        width: 50px;
+                                                                                                                                                                                                                                                                        border-radius: 50%;
+                                                                                                                                                                                                                                                                        background-color: transparent;
+                                                                                                                                                                                                                                                                        outline: 10px solid #EC4A4A;
+                                                                                                                                                                                                                                                                        margin-left: 100px;
+                                                                                                                                                                                                                                                                        position: absolute;
+                                                                                                                                                                                                                                                                        margin-top: -120px;
+                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                    .right_content .circless {
+                                                                                                                                                                                                                                                                        height: 30px;
+                                                                                                                                                                                                                                                                        width: 30px;
+                                                                                                                                                                                                                                                                        background-color: aqua;
+                                                                                                                                                                                                                                                                        border-radius: 50%;
+                                                                                                                                                                                                                                                                        position: absolute;
+                                                                                                                                                                                                                                                                        margin-left: 300px;
+                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                    @media screen and (max-width: 768px) {
+                                                                                                                                                                                                                                                                        .right_content .circle {
+                                                                                                                                                                                                                                                                            height: 80px;
+                                                                                                                                                                                                                                                                            width: 80px;
+                                                                                                                                                                                                                                                                            outline: 8px solid rgba(0, 255, 255, 0.562);
+                                                                                                                                                                                                                                                                        }
+                                                                                                                                                                                                                                                                        .right_content .circle .circles {
+                                                                                                                                                                                                                                                                            height: 25px;
+                                                                                                                                                                                                                                                                            width: 25px;
+                                                                                                                                                                                                                                                                            outline: 5px solid #ec4a4a;
+                                                                                                                                                                                                                                                                            margin-bottom: -50px;
+                                                                                                                                                                                                                                                                            margin-right: 50px;
+                                                                                                                                                                                                                                                                        }
+                                                                                                                                                                                                                                                                        .right_content .circle {
+                                                                                                                                                                                                                                                                            margin-left: -210px;
+                                                                                                                                                                                                                                                                            margin-top: 15rem;
+                                                                                                                                                                                                                                                                        }
+                                                                                                                                                                                                                                                                        .right_content .circless {
+                                                                                                                                                                                                                                                                            height: 15px;
+                                                                                                                                                                                                                                                                            width: 15px;
+                                                                                                                                                                                                                                                                            position: absolute;
+                                                                                                                                                                                                                                                                            margin-top: 40px;
+                                                                                                                                                                                                                                                                            margin-left: 140px;
+                                                                                                                                                                                                                                                                        }
+                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                    .right_content .texts {
+                                                                                                                                                                                                                                                                        margin-top: 50px;
+                                                                                                                                                                                                                                                                        margin-left: 50px;
+                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                    .right_content .texts .text_exp {
+                                                                                                                                                                                                                                                                        color: #EC4A4A;
+                                                                                                                                                                                                                                                                        font-size: 16px;
+                                                                                                                                                                                                                                                                        font-weight: 400;
+                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                    .right_content .texts .text_title {
+                                                                                                                                                                                                                                                                        color: white;
+                                                                                                                                                                                                                                                                        font-size: 20px;
+                                                                                                                                                                                                                                                                        font-weight: 300;
+                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                    .right_content .texts .text {
+                                                                                                                                                                                                                                                                        color: white;
+                                                                                                                                                                                                                                                                        font-size: 14px;
+                                                                                                                                                                                                                                                                        font-weight: 400;
+                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                    @media screen and (max-width: 768px) {
+                                                                                                                                                                                                                                                                        .right_content .texts {
+                                                                                                                                                                                                                                                                            background-color: rgba(146, 142, 142, 0.281);
+                                                                                                                                                                                                                                                                            padding: 20px;
+                                                                                                                                                                                                                                                                            border-radius: 10px;
+                                                                                                                                                                                                                                                                            width: fit-content;
+                                                                                                                                                                                                                                                                            text-wrap: nowrap;
+                                                                                                                                                                                                                                                                            margin-right: 50rem;
+                                                                                                                                                                                                                                                                            position: absolute;
+                                                                                                                                                                                                                                                                            margin-left: -12rem;
+                                                                                                                                                                                                                                                                            margin-top: 13rem;
+                                                                                                                                                                                                                                                                        }
+                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                    .right_content button {
+                                                                                                                                                                                                                                                                        margin-top: 80px;
+                                                                                                                                                                                                                                                                        margin-left: 50px;
+                                                                                                                                                                                                                                                                        font-size: 20px;
+                                                                                                                                                                                                                                                                        color: #D93B3B;
+                                                                                                                                                                                                                                                                        background-color: transparent;
+                                                                                                                                                                                                                                                                        border: none;
+                                                                                                                                                                                                                                                                        cursor: pointer;
+                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                    .right_content button img {
+                                                                                                                                                                                                                                                                        height: 30px;
+                                                                                                                                                                                                                                                                        margin-top: -5px;
+                                                                                                                                                                                                                                                                        position: absolute;
+                                                                                                                                                                                                                                                                        margin-left: 5px;
+                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                    @media screen and (max-width: 768px) {
+                                                                                                                                                                                                                                                                        .right_content button {
+                                                                                                                                                                                                                                                                            margin-top: 26.7rem;
+                                                                                                                                                                                                                                                                            display: flex;
+                                                                                                                                                                                                                                                                            text-wrap: nowrap;
+                                                                                                                                                                                                                                                                            padding: 18px;
+                                                                                                                                                                                                                                                                            width: 190px;
+                                                                                                                                                                                                                                                                            margin-left: 1rem;
+                                                                                                                                                                                                                                                                            border-radius: 10px;
+                                                                                                                                                                                                                                                                        }
+                                                                                                                                                                                                                                                                        .right_content button img {
+                                                                                                                                                                                                                                                                            margin-left: 8rem;
+                                                                                                                                                                                                                                                                        }
+                                                                                                                                                                                                                                                                        .right_content button:hover {
+                                                                                                                                                                                                                                                                            border: 1px solid #EC4A4A;
+                                                                                                                                                                                                                                                                        }
+                                                                                                                                                                                                                                                                    }
